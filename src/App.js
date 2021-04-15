@@ -1,16 +1,14 @@
-import logo from './logo.svg';
+import React from 'react';
+import { Route, Switch } from 'react-router-dom';
 
-import './App.css';
+import LandingPage from './views/LandingPage/LandingPage';
+import ProfilePage from './views/ProfilePage/ProfilePage';
 
-function App() {
-  return (
-    <div className='App'>
-      <header className='App-header'>
-        <img src={logo} className='App-logo' alt='logo' />
-        <h1>PORTOFOLIO GLIGA Dumitru</h1>
-      </header>
-    </div>
-  );
-}
+const App = () => (
+  <Switch>
+    <Route exact path='/profile' component={ProfilePage} />
+    <Route path='/' component={LandingPage} />
+  </Switch>
+);
 
 export default App;
