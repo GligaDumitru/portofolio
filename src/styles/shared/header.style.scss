@@ -1,0 +1,83 @@
+@import "../utils/variables";
+
+html,
+body {
+    background: url("https://analyticsindiamag.com/wp-content/uploads/2020/10/7d744a684fe03ebc7e8de545f97739dd.jpg");
+}
+.appBar {
+    display: none;
+    border: 0;
+    border-radius: 3px;
+    padding: 0.625rem 0;
+    margin-bottom: 20px;
+    color: red;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 4px 18px 0px rgba(0, 0, 0, 0.12), 0 7px 10px -5px rgba(0, 0, 0, 0.15);
+    transition: all 150ms ease 0s !important;
+    align-items: center;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    position: relative;
+    z-index: unset;
+    &.absolute {
+        position: absolute;
+        z-index: 1100;
+    }
+    &.fixed {
+        position: fixed;
+        z-index: 1100;
+    }
+    .container {
+        @include container;
+        min-height: 50px;
+        flex: 1;
+        align-items: center;
+        justify-content: space-between;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    .flex {
+        flex: 1;
+    }
+    .title {
+        @include defaultFont;
+        line-height: 30px;
+        font-size: 20px;
+        border-radius: 3px;
+        text-transform: uppercase;
+        text-shadow: 3px 3px rgba(255, 255, 255, 0.26);
+        font-weight: bold;
+        color: inherit;
+        padding: 8px 16px;
+        letter-spacing: 2px;
+        &:focus,
+        &:hover {
+            color: inherit;
+            background: transparent;
+            text-shadow: 3px 3px rgba(255, 255, 255, 0.123);
+        }
+    }
+    .appResponsive {
+        margin: 20px 10px;
+    }
+    &.primary {
+        background-color: $primaryColor;
+        color: #fff;
+        box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 12px -5px rgba(156, 39, 176, 0.46);
+    }
+    &.transparent {
+        background-color: transparent !important;
+        box-shadow: none;
+        padding-top: 25px;
+        color: #fff;
+    }
+    &.white {
+        border: 0;
+        padding: 0;
+        margin: 0;
+        color: #555;
+        background-color: #fff !important;
+        box-shadow: 0 4px 18px 0px rgba(0, 0, 0, 0.12), 0 7px 10px -5px rgba(0, 0, 0, 0.15);
+    }
+}
