@@ -1,0 +1,13 @@
+.grid-container {
+    margin-right: -15px;
+    margin-left: -15px;
+    width: auto;
+    .grid-item {
+        position: relative;
+        width: 100%;
+        min-height: 1px;
+        padding-right: 15px;
+        padding-left: 15px;
+        flex-basis: auto;
+    }
+}

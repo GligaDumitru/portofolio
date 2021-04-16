@@ -21,7 +21,7 @@ $grayColor: #999999;
     width: 100%;
 }
 
-@mixin container {
+@mixin containerFn {
     @include containerFluid;
     @media (min-width: $responsive576) {
         max-width: 540px;
@@ -35,6 +35,10 @@ $grayColor: #999999;
     @media (min-width: $responsive1200) {
         max-width: 1140px;
     }
+}
+
+.container {
+    @include containerFn;
 }
 
 @mixin box-shadow {
@@ -123,4 +127,9 @@ $grayColor: #999999;
     border-top: 1px solid #eee;
     height: auto;
     @include defaultFont;
+}
+
+html,
+body {
+    background-color: #d4cfcf;
 }

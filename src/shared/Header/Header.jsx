@@ -121,7 +121,7 @@ Header.propTypes = {
   fixed: PropTypes.bool,
   absolute: PropTypes.bool,
   changeColorOnScroll: PropTypes.shape({
-    height: PropTypes.number.isRequired,
+    height: PropTypes.string.isRequired,
     color: PropTypes.oneOf([
       'primary',
       'info',
