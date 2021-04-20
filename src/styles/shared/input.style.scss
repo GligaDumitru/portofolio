@@ -1,0 +1,97 @@
+@import "../utils/variables";
+
+.disabled {
+    &:before {
+        border-color: transparent !important;
+    }
+}
+.underline {
+    &:hover:not(.disabled):before,
+    &:before {
+        border: none !important;
+    }
+    &:after {
+        border: none !important;
+    }
+}
+.underlineError {
+    &:after {
+        border-color: $dangerColor;
+    }
+}
+.underlineSuccess {
+    &:after {
+        border-color: $successColor;
+    }
+}
+.whiteUnderline {
+    &:hover:not(.disabled):before,
+    &:before {
+        border-color: #ffffff;
+    }
+    &:after {
+        border-color: #ffffff;
+    }
+}
+.labelRoot {
+    @include defaultFont;
+    color: #aaaaaa !important;
+    font-weight: 400 !important;
+    left: 10px !important;
+    font-size: 14px !important;
+    line-height: 1.42857 !important;
+    top: 10px !important;
+    letter-spacing: unset !important;
+    & + .underline {
+        margin-top: 0px !important;
+    }
+    &[data-shrink="true"] {
+        transform: translate(0, -5.5px) scale(0.75);
+        transform-origin: top left;
+    }
+}
+.labelRootError {
+    color: $dangerColor !important;
+}
+.labelRootSuccess {
+    color: $successColor !important;
+}
+.formControl {
+    margin: 0 0 17px 0 !important;
+    padding-top: 27px !important;
+    position: relative !important;
+    & svg,
+    & .fab,
+    & .far,
+    & .fal,
+    & .fas,
+    & .material-icons {
+        color: #495057 !important;
+    }
+}
+.input {
+    color: #495057 !important;
+    height: unset !important;
+    box-shadow: $custom-control-indicator-focus-box-shadow;
+    padding-left: 20px !important;
+    border: 1px solid red;
+    &,
+    &::placeholder {
+        font-size: 18px !important;
+        font-family: "Roboto", Helvetica, Arial, sans-serif !important;
+        font-weight: 400 !important;
+        line-height: 1.42857 !important;
+        margin-left: 10px;
+        opacity: 1 !important;
+    }
+    &::placeholder {
+        color: #aaaaaa !important;
+    }
+}
+.whiteInput {
+    &,
+    &::placeholder {
+        color: #ffffff !important;
+        opacity: 1 !important;
+    }
+}

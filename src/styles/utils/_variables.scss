@@ -5,7 +5,7 @@ $responsive768: 768px;
 $responsive992: 992px;
 $responsive1200: 1200px;
 
-$primaryColor: #9c27b0;
+$primaryColor: #3068c2;
 $warningColor: #ff9800;
 $dangerColor: #f44336;
 $successColor: #4caf50;
@@ -39,6 +39,14 @@ $grayColor: #999999;
 
 .container {
     @include containerFn;
+}
+
+@mixin title {
+    color: #3c4858;
+    margin: 1.75rem 0 0.875rem;
+    text-decoration: none;
+    font-weight: 700;
+    font-family: "Roboto Slab", "Times New Roman", serif;
 }
 
 @mixin box-shadow {

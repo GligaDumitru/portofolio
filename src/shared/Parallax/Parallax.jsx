@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import React, { useEffect, useState } from 'react';
+
 const Parallax = ({ className, small, style, filter, image, children }) => {
   let windowScrollTop = window.innerWidth >= 768 ? window.pageYOffset / 3 : 0;
   const [transform, setTransform] = useState(
@@ -47,7 +48,7 @@ Parallax.propTypes = {
   filter: PropTypes.bool,
   children: PropTypes.node,
   style: PropTypes.string,
-  image: PropTypes.string,
+  image: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   small: PropTypes.bool,
 };
 

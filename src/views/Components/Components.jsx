@@ -1,10 +1,13 @@
 import React from 'react';
+
+import bg7 from '../../assets/img/bg7.jpg';
+import GridItem from '../../shared/Grid/GridItem';
 import HeaderLinks from '../../shared/Header/HeaderLinks';
+import GridContainer from './../../shared/Grid/GridContainer';
 import Header from './../../shared/Header/Header';
 import Parallax from './../../shared/Parallax/Parallax';
-import bg4 from '../../assets/img/bg4.jpg';
-import GridContainer from './../../shared/Grid/GridContainer';
-import GridItem from '../../shared/Grid/GridItem';
+import SectionBasics from './Sections/SectionBasics';
+
 const Components = () => {
   return (
     <>
@@ -16,7 +19,7 @@ const Components = () => {
         rightLinks={<HeaderLinks />}
       />
       <div className='component-wrapper'>
-        <Parallax image={bg4}>
+        <Parallax image={bg7}>
           <div className='container'>
             <GridContainer>
               <GridItem>
@@ -31,9 +34,13 @@ const Components = () => {
           </div>
         </Parallax>
         <div className='main main-raised'>
-          <h1>asd</h1>
+          <SectionBasics />
         </div>
-        <div style={{ minHeight: '3000px' }}>asd</div>
+        {/* <ScrollAnimation animateIn='swing'>
+          <div className='main main-raised'>
+            <div style={{ minHeight: '500px' }}>asd</div>
+          </div>
+        </ScrollAnimation> */}
       </div>
     </>
   );
