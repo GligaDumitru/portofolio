@@ -1,0 +1,40 @@
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.img-rounded {
+    border-radius: 6px !important;
+}
+.img-circle {
+    border-radius: 50% !important;
+}
+.img-raised {
+    box-shadow: 0 5px 15px -8px rgba(0, 0, 0, 0.24), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+.img-gallery {
+    width: 100%;
+    margin-bottom: 2.142rem;
+}
+.img-card-top {
+    width: 100%;
+    border-top-left-radius: calc(0.25rem - 1px);
+    border-top-right-radius: calc(0.25rem - 1px);
+}
+.img-card-bottom {
+    width: 100%;
+    border-bottom-left-radius: calc(0.25rem - 1px);
+    border-bottom-right-radius: calc(0.25rem - 1px);
+}
+.img-card {
+    width: 100%;
+    border-radius: calc(0.25rem - 1px);
+}
+.img-card-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1.25rem;
+}

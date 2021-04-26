@@ -1,0 +1,43 @@
+@import "../utils/variables";
+
+.profile-wrapper {
+    .container {
+        @include containerFn;
+    }
+    .profile {
+        text-align: center;
+        img {
+            max-width: 160px;
+            width: 100%;
+            margin: 0 auto;
+            transform: translate3d(0, -50%, 0);
+        }
+    }
+    .main {
+        @include mainFn;
+    }
+    .main-raised {
+        @include mainRaisedFn;
+    }
+    .link {
+        text-decoration: none;
+    }
+    .name {
+        margin-top: -80px;
+        quotes: "„" "“" "‚" "‘";
+        q {
+            font-family: "Kalam", cursive;
+        }
+    }
+    .textCenter {
+        text-align: center;
+    }
+    .title {
+        @include titleFn;
+        display: inline-block;
+        position: relative;
+        margin-top: 30px;
+        min-height: 32px;
+        text-decoration: none;
+    }
+}

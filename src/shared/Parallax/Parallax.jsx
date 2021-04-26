@@ -23,10 +23,11 @@ const Parallax = ({ className, small, style, filter, image, children }) => {
     setTransform(`translate3d(0,${window.pageYOffset / 2}px,0)`);
   };
 
+  console.log(filter, small, className);
   const parallaxClasses = classNames({
     parallax: true,
-    [filter]: filter,
-    [small]: small,
+    filter: filter,
+    small: small,
     [className]: className,
   });
   return (
