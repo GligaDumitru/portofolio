@@ -1,0 +1,52 @@
+@import "../utils/variables";
+
+.root {
+    height: 4px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+.bar {
+    height: 4px;
+}
+.primary {
+    background-color: $primaryColor !important;
+}
+.warning {
+    background-color: $warningColor !important;
+}
+.danger {
+    background-color: $dangerColor !important;
+}
+.success {
+    background-color: $successColor !important;
+}
+.info {
+    background-color: $infoColor !important;
+}
+.rose {
+    background-color: $roseColor !important;
+}
+.gray {
+    background-color: $grayColor !important;
+}
+.primary-background {
+    background: rgba(156, 39, 176, 0.2) !important;
+}
+.warning-background {
+    background: rgba(255, 152, 0, 0.2) !important;
+}
+.danger-background {
+    background: rgba(244, 67, 54, 0.2) !important;
+}
+.success-background {
+    background: rgba(76, 175, 80, 0.2) !important;
+}
+.info-background {
+    background: rgba(0, 188, 212, 0.2) !important;
+}
+.rose-background {
+    background: rgba(233, 30, 99, 0.2) !important;
+}
+.gray-background {
+    background: rgba(221, 221, 221, 0.2) !important;
+}

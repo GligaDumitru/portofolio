@@ -26,7 +26,11 @@
         margin-top: -80px;
         quotes: "„" "“" "‚" "‘";
         q {
+            display: block;
             font-family: "Kalam", cursive;
+        }
+        q + h6 {
+            text-align: right;
         }
     }
     .textCenter {
