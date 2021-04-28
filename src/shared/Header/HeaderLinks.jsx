@@ -3,7 +3,7 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import Tooltip from '@material-ui/core/Tooltip';
 import Button from './../Button/Button';
-
+import GDResume from '../../assets/files/me.pdf';
 const HeaderLinks = () => (
   <List className='list'>
     <ListItem className='list-item'>
@@ -13,8 +13,9 @@ const HeaderLinks = () => (
         placement={window.innerWidth > 959 ? 'top' : 'left'}
       >
         <Button
-          href='https://www.facebook.com/GligaDumitruDaniel'
+          href={GDResume}
           target='_blank'
+          // download='GligaDumitruResume.pdf'
           color='transparent'
           className='nav-link'
         >
