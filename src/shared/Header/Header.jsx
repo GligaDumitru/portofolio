@@ -90,6 +90,12 @@ const Header = ({
           onClose={() => setMobileOpen(false)}
         >
           <div className='appResponsive'>
+            <div
+              className='closeModalHeader'
+              onClick={() => setMobileOpen(false)}
+            >
+              <i class='fas fa-bars'></i>
+            </div>
             {leftLinks}
             {rightLinks}
           </div>

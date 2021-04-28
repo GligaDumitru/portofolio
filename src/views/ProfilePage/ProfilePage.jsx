@@ -1,22 +1,135 @@
-import Tooltip from '@material-ui/core/Tooltip';
+import CodeIcon from '@material-ui/icons/Code';
+import SchoolIcon from '@material-ui/icons/School';
 import React from 'react';
 
 import bg7 from '../../assets/img/bg2.jpg';
-import profile from '../../assets/img/faces/dan.png';
-import { default as Button } from './../../shared/Button/Button';
+import me4 from '../../assets/img/faces/me4.jpg';
+import Badge from './../../shared/Badge/Badge';
 import GridContainer from './../../shared/Grid/GridContainer';
 import GridItem from './../../shared/Grid/GridItem';
 import Header from './../../shared/Header/Header';
 import HeaderLinks from './../../shared/Header/HeaderLinks';
 import Parallax from './../../shared/Parallax/Parallax';
-import ProgressBar from './../../shared/ProgressBar/ProgressBar';
-import SkillItem from './components/skillItem';
+import CustomizedTimeline from './components/CustomizedTimeline';
+import SkillItem from './components/SkillItem';
+import VerifiedUserIcon from '@material-ui/icons/VerifiedUser';
+import AccessibilityNewIcon from '@material-ui/icons/AccessibilityNew';
+const TOOLS = [
+  'Git',
+  'VSCode',
+  'Jira',
+  'Jenkins',
+  'Lodash',
+  'MomentJS',
+  'Redux DevTools',
+  'React DevTools',
+  'PWA',
+];
+const CERTIFICATIONS = [
+  {
+    left: {
+      title: 'Zero To Mastery Academy',
+      description: 'April 2021',
+    },
+    icon: <VerifiedUserIcon />,
+    right: {
+      title: 'Udemy',
+      description: `Complete React Developer Course 2021(w/ Redux, Hooks, GraphQL)`,
+      links: [
+        {
+          label: 'View Certification',
+          linkTo:
+            'https://www.udemy.com/certificate/UC-cccbf0f8-32db-4c42-b96a-1aeef8bcf7c5/',
+        },
+      ],
+    },
+  },
+];
+const PERSONAL_DESCRIPTION =
+  'I started with HTML and CSS in high school. Then I discovered JS who fascinated me and I realized that I like it. I created personal projects and after a while I discovered Node.js that allowed me to create a full stack application only with JS. I participated in an School of UI in Endava, where I learned React and Redux then I learned to create MERN Stack applications ';
+const VOLUNTEERING_EXPERIENCE = [
+  {
+    left: {
+      title: 'Volunteer',
+      description: 'October 2017 - June 2019',
+    },
+    icon: <AccessibilityNewIcon />,
+    right: {
+      title: 'Volunteer ASII',
+      description:
+        'Volunteer in the Association of computer science students Iasi',
+    },
+  },
+];
+
+const EDUCATION_EXPERIENCE = [
+  {
+    left: {
+      title: 'High School Degree',
+      description: 'September 2013 - June 2017',
+    },
+    icon: <SchoolIcon />,
+    right: {
+      title: 'High School',
+      description: 'Computer Science High School "Grigore Moisil" Iasi',
+    },
+  },
+  {
+    left: {
+      title: 'Bachelor Degree',
+      description: 'October 2017 - June 2020',
+    },
+    icon: <SchoolIcon />,
+    right: {
+      title: 'College',
+      description: 'Faculty of Computer Science Iasi',
+    },
+  },
+];
+const WORK_EXPERIENCE = [
+  {
+    left: {
+      title: 'Front-end Developer',
+      description: 'June 2021 - Present',
+    },
+    icon: <CodeIcon />,
+    right: {
+      title: 'Endava',
+      description:
+        'Part of the front-end development team on a insurance project. Responsible of implementing the required design. Technology Stack: HTML, CSS, JQuery, JSP, SVN',
+    },
+  },
+
+  {
+    left: {
+      title: 'Front-end Developer',
+      description: 'February 2019 - March 2020',
+    },
+    icon: <CodeIcon />,
+    right: {
+      title: 'Endava',
+      description:
+        'Part of the front-end development team on a insurance project. Responsible of implementing the required design. Technology Stack: HTML, CSS, JQuery, JSP, SVN',
+    },
+  },
+  {
+    left: {
+      title: 'UI School',
+      description: 'November 2018 - December 2018',
+    },
+    icon: <CodeIcon />,
+    right: {
+      title: 'Endava',
+      description: 'HTML, CSS, JS, ReactJS Internship',
+    },
+  },
+];
 
 const ProfilePage = () => {
   return (
     <>
       <Header
-        brand='Profile Page'
+        brand='<About.me/>'
         fixed
         color='transparent'
         changeColorOnScroll={{ height: '200', color: 'white' }}
@@ -31,7 +144,7 @@ const ProfilePage = () => {
                 <div className='profile'>
                   <div>
                     <img
-                      src={profile}
+                      src={me4}
                       alt='profile'
                       className='img-raised img-circle img-fluid'
                     />
@@ -43,64 +156,15 @@ const ProfilePage = () => {
                       Eventually be Written in JavaScript
                     </q>
                     <h6>John M. Wright, Stack Overflow</h6>
-                    <Tooltip
-                      id='instagram'
-                      title='Follow me on Instagram'
-                      placement={'bottom'}
-                    >
-                      <a
-                        target='_blank'
-                        rel='noreferrer'
-                        href='https://www.instagram.com/ddaniidaniell/'
-                      >
-                        <Button justIcon link>
-                          <i className={'fab fa-instagram'} />
-                        </Button>
-                      </a>
-                    </Tooltip>
-                    <Tooltip
-                      id='facebook'
-                      title='Chat with me on Facebook'
-                      placement={'bottom'}
-                    >
-                      <a
-                        target='_blank'
-                        rel='noreferrer'
-                        href='https://www.facebook.com/GligaDumitruDaniel'
-                      >
-                        <Button justIcon link>
-                          <i className={'fab fa-facebook'} />
-                        </Button>
-                      </a>
-                    </Tooltip>
-
-                    <Tooltip
-                      id='linkedin'
-                      title="Let's connect on Linkedin"
-                      placement={'bottom'}
-                    >
-                      <a
-                        title='Linkedin'
-                        target='_blank'
-                        rel='noreferrer'
-                        href='https://www.linkedin.com/in/gligadumitru/'
-                      >
-                        <Button justIcon link>
-                          <i className={'fab fa-linkedin'} />
-                        </Button>
-                      </a>
-                    </Tooltip>
                   </div>
                 </div>
               </GridItem>
             </GridContainer>
             <div className='description'>
-              <p>
-                An artist of considerable range, Chet Faker — the name taken by
-                Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs
-                and records all of his own music, giving it a warm, intimate
-                feel with a solid groove structure.
-              </p>
+              <div className='title'>
+                <h3>About me</h3>
+              </div>
+              <p>{PERSONAL_DESCRIPTION}</p>
             </div>
             <div className='skills'>
               <div className='title'>
@@ -126,28 +190,47 @@ const ProfilePage = () => {
                 </GridItem>
               </GridContainer>
             </div>
-            <div className='skills'>
+            <div className='tools'>
               <div className='title'>
                 <h3>Tools</h3>
               </div>
-              <GridContainer>
-                <GridItem xs={12} sm={12} md={6}>
-                  <SkillItem name='Git' color='success' value='90' />
-                  <SkillItem name='VSCode' color='success' value='85' />
-                  <SkillItem name='Jira' color='primary' value='80' />
-                  <SkillItem name='Jenkins' color='primary' value='80' />
-                </GridItem>
-
-                <GridItem xs={12} sm={12} md={6}>
-                  <SkillItem name='Lodash' color='info' value='90' />
-                  <SkillItem name='MomentJS' color='info' value='85' />
-                  <SkillItem name='Redux DevTools' color='info' value='75' />
-                  <SkillItem name='React DevTools' color='info' value='75' />
-                  <SkillItem name='PWA' color='info' value='45' />
-                </GridItem>
-              </GridContainer>
+              <div>
+                {TOOLS.map((tool) => (
+                  <Badge color='info'>{tool}</Badge>
+                ))}
+              </div>
             </div>
-            <div className='clear-space 100'></div>
+
+            <div className='resume'>
+              <div className='title'>
+                <h3>Resume</h3>
+              </div>
+              <br />
+              <div className='headerTitle'>
+                <h3>Work Experience</h3>
+              </div>
+              <CustomizedTimeline data={WORK_EXPERIENCE} />
+              <div className='headerTitle'>
+                <h3>Education Experience</h3>
+              </div>
+              <CustomizedTimeline data={EDUCATION_EXPERIENCE} />
+              <div className='headerTitle'>
+                <h3>Volunteering Experience</h3>
+              </div>
+              <CustomizedTimeline data={VOLUNTEERING_EXPERIENCE} />
+              <div className='headerTitle'>
+                <h3>Certifications</h3>
+              </div>
+              <CustomizedTimeline data={CERTIFICATIONS} />
+            </div>
+            <div className='projects'>
+              <div className='title'>
+                <h3>Projects</h3>
+              </div>
+              <div>
+                <Badge>Comming Soon</Badge>
+              </div>
+            </div>
           </div>
         </div>
       </div>

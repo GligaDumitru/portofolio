@@ -44,4 +44,13 @@
         min-height: 32px;
         text-decoration: none;
     }
+    .headerTitle {
+        text-transform: uppercase;
+        font-size: 20px;
+        text-align: center;
+    }
+    .center {
+        display: block;
+        margin-left: auto;
+    }
 }

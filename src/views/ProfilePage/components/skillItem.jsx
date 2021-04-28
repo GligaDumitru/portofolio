@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import ProgressBar from './../../../shared/ProgressBar/ProgressBar';
+import ProgressBar from '../../../shared/ProgressBar/ProgressBar';
 
 const SkillItem = ({ name, color, value }) => {
   return (
@@ -15,6 +15,7 @@ const SkillItem = ({ name, color, value }) => {
     </div>
   );
 };
+
 SkillItem.defaultProps = {
   name: 'skill name',
   color: 'gray',

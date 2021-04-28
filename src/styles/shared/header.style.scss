@@ -1,5 +1,14 @@
 @import "../utils/variables";
-
+.closeModalHeader {
+    display: inline-block;
+    margin: 20px;
+    i {
+        font-size: 20px;
+    }
+    &:hover {
+        cursor: pointer;
+    }
+}
 .appBar {
     display: none;
     border: 0;
@@ -16,6 +25,11 @@
     justify-content: flex-start;
     position: relative;
     z-index: unset;
+
+    .closeModalHeader {
+        margin: 20px;
+        border: 1px solid red;
+    }
     &.absolute {
         position: absolute;
         z-index: 1100;
