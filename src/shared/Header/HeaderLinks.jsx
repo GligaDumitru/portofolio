@@ -1,9 +1,11 @@
-import React from 'react';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import Tooltip from '@material-ui/core/Tooltip';
+import React from 'react';
+
+import GDResume from '../../assets/files/resumeGliga.pdf';
 import Button from './../Button/Button';
-import GDResume from '../../assets/files/me.pdf';
+
 const HeaderLinks = () => (
   <List className='list'>
     <ListItem className='list-item'>
