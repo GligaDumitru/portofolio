@@ -11,6 +11,7 @@ import React from 'react';
 
 const CustomizedTimeline = ({ data }) => {
   const dataLength = data && data.length > 0 ? data.length - 1 : 0;
+
   return (
     <Timeline>
       {data &&
@@ -32,9 +33,18 @@ const CustomizedTimeline = ({ data }) => {
               <Typography variant='h6' component='h1'>
                 {right.title}
               </Typography>
-              <Typography variant='body2' color='textSecondary'>
-                {right.description}
-              </Typography>
+              {Array.isArray(right.description) ? (
+                right.description.map((el) => (
+                  <Typography variant='body2' color='textSecondary'>
+                    {el}.
+                  </Typography>
+                ))
+              ) : (
+                <Typography variant='body2' color='textSecondary'>
+                  {right.description}
+                </Typography>
+              )}
+
               {right.links &&
                 right.links.map(({ label, linkTo }) => (
                   <Typography variant='body2' color='textSecondary'>

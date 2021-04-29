@@ -1,5 +1,7 @@
+import AccessibilityNewIcon from '@material-ui/icons/AccessibilityNew';
 import CodeIcon from '@material-ui/icons/Code';
 import SchoolIcon from '@material-ui/icons/School';
+import VerifiedUserIcon from '@material-ui/icons/VerifiedUser';
 import React from 'react';
 
 import bg7 from '../../assets/img/bg2.jpg';
@@ -12,8 +14,7 @@ import HeaderLinks from './../../shared/Header/HeaderLinks';
 import Parallax from './../../shared/Parallax/Parallax';
 import CustomizedTimeline from './components/CustomizedTimeline';
 import SkillItem from './components/SkillItem';
-import VerifiedUserIcon from '@material-ui/icons/VerifiedUser';
-import AccessibilityNewIcon from '@material-ui/icons/AccessibilityNew';
+
 const TOOLS = [
   'Git',
   'VSCode',
@@ -95,8 +96,18 @@ const WORK_EXPERIENCE = [
     icon: <CodeIcon />,
     right: {
       title: 'Endava',
-      description:
-        'Part of the front-end development team on a insurance project. Responsible of implementing the required design. Technology Stack: HTML, CSS, JQuery, JSP, SVN',
+      description: `
+      • Part of a banking project I collaborate with clients during development processes to implement
+          the required design.
+      • Work in an Agile-driven environment to effectively maintain project
+          timelines and utilize available resources.
+      • Work closely with other business analysts, development teams, and
+          infrastructure specialists to deliver high availability solutions.
+      • Modify existing software to correct coding errors, performing and
+          modifying unit tests, upgrade interfaces based on provided designs,
+          improve overall performance.
+      • Technology stack: HTML5, SCSS, ReactJS, Redux, Jest, Git, Jira, Jenkins.
+      `.split('.'),
     },
   },
 
@@ -120,7 +131,18 @@ const WORK_EXPERIENCE = [
     icon: <CodeIcon />,
     right: {
       title: 'Endava',
-      description: 'HTML, CSS, JS, ReactJS Internship',
+      description: `
+      • Created tasks and communicated deadlines to ensure projects were
+          completed on time.
+      • Participated in continuous improvement by generating suggestions,
+          engaging in problem-solving activities to support teamwork.
+      • Quickly learned new skills and applied them to daily tasks, improving
+          efficiency and productivity.
+      • For 6 weeks I learned the basics of Javascript, then with the entire
+          team, we created an application for HR people for managing quizzes
+          for new students on summer practice.
+      • Technology stack: HTML5, SCSS, ReactJS, Redux, Git, Jira.
+      `.split('.'),
     },
   },
 ];
