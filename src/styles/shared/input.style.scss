@@ -5,6 +5,7 @@
         border-color: transparent !important;
     }
 }
+
 .underline {
     &:hover:not(.disabled):before,
     &:before {
@@ -71,8 +72,8 @@
 }
 .input {
     color: #495057 !important;
-    height: unset !important;
-    box-shadow: $custom-control-indicator-focus-box-shadow;
+    height: unset;
+    box-shadow: $custom-control-indicator-focus-box-shadow !important;
     padding-left: 20px !important;
     border: 1px solid red;
     &,
@@ -86,6 +87,10 @@
     }
     &::placeholder {
         color: #aaaaaa !important;
+    }
+    &.multiline {
+        resize: vertical;
+        min-height: 100px !important;
     }
 }
 .whiteInput {

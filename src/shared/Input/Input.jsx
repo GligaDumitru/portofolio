@@ -11,11 +11,12 @@ const Input = (props) => {
     labelText,
     id,
     labelProps,
-    inputProps,
     error,
     white,
     inputRootCustomClasses,
     success,
+    multiline,
+    ...inputProps
   } = props;
 
   const labelClasses = classNames({
@@ -36,6 +37,7 @@ const Input = (props) => {
 
   const inputClasses = classNames({
     input: true,
+    multiline: multiline,
     whiteInput: white,
   });
 
@@ -46,15 +48,6 @@ const Input = (props) => {
       formControl: true,
     });
   }
-
-  //   console.log(`labelRoot ${labelClasses}`);
-  //   console.log({
-  //     input: inputClasses,
-  //     root: marginTop,
-  //     disabled: 'disabled',
-  //     underline: underlineClasses,
-  //   });
-  console.log(labelText);
   return (
     <FormControl {...formControlProps} className={formControlClasses}>
       {labelText !== undefined ? (
@@ -74,6 +67,7 @@ const Input = (props) => {
           underline: underlineClasses,
         }}
         id={id}
+        multiline={multiline}
         {...inputProps}
       />
     </FormControl>

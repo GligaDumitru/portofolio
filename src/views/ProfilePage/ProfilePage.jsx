@@ -12,6 +12,7 @@ import GridItem from './../../shared/Grid/GridItem';
 import Header from './../../shared/Header/Header';
 import HeaderLinks from './../../shared/Header/HeaderLinks';
 import Parallax from './../../shared/Parallax/Parallax';
+import ContactForm from './components/ContactForm';
 import CustomizedTimeline from './components/CustomizedTimeline';
 import SkillItem from './components/SkillItem';
 
@@ -251,6 +252,15 @@ const ProfilePage = () => {
               </div>
               <div>
                 <Badge>Comming Soon</Badge>
+              </div>
+            </div>
+
+            <div className='contact'>
+              <div className='title'>
+                <h3>Contact Form</h3>
+              </div>
+              <div>
+                <ContactForm />
               </div>
             </div>
           </div>
